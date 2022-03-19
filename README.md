@@ -57,5 +57,34 @@ public class SimplexTestPlugin extends Plugin {
     }
 }
 ````
+### Example with KeyBindings:
+````java
+public class SimplexTestPlugin extends Plugin {
 
+    private final KeyBinding keyBinding = new KeyBinding("Test Keybinding", Keyboard.KEY_U, "SimplexClient");
+    private final Minecraft mc = Minecraft.getMinecraft();
+
+    @Override
+    public void onEnable() {
+        SimplexClient.getInstance().getSimplexAPI().getSimplexKeybindings().registerKeyBinding(keyBinding);
+        EventManager.register(this);
+    }
+
+    @EventTarget
+    public void onTick(ClientTickEvent event) {
+        if (keyBinding.isPressed()) {
+            mc.thePlayer.sendChatMessage("This is a Message!");
+        }
+    }
+
+    @Override
+    public void onDisable() {
+        EventManager.unregister(this);
+    }
+
+    public Minecraft getMc() {
+        return mc;
+    }
+}
+````
 
