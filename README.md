@@ -113,8 +113,8 @@ public class TestMod extends HudMod {
 then add this in you Main
 ```java
 @Override
-    public void onEnable() {
-        SimplexClient.getInstance().hudManager.hudMods.add(new TestMod());
-    }
+public void onEnable() {
+    SimplexClient.getInstance().hudManager.hudMods.add(new TestMod());
+}
 ````
 If you need help the join our Discord Server: https://simplexclient.tk/discord
