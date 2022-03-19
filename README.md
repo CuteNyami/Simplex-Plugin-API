@@ -89,4 +89,32 @@ public class SimplexTestPlugin extends Plugin {
     }
 }
 ````
+### Example for HudMods:
+````java
+public class TestMod extends HudMod {
+    
+    public TestMod() {
+        super("test mod", "test mod lol", 1, 1, null);
+    }
+
+    @Override
+    public void draw() {
+        SimplexClient.textRenderer1.drawString("Test", getX(), getY(), -1);
+        super.draw();
+    }
+
+    @Override
+    public void renderDummy(int mouseX, int mouseY) {
+        SimplexClient.textRenderer1.drawString("Test", getX(), getY(), -1);
+        super.renderDummy(mouseX, mouseY);
+    }
+}
+````
+then add this in you Main
+```java
+@Override
+    public void onEnable() {
+        SimplexClient.getInstance().hudManager.hudMods.add(new TestMod());
+    }
+````
 If you need help the join our Discord Server: https://simplexclient.tk/discord
