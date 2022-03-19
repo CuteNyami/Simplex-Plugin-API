@@ -1,2 +1,61 @@
-# Simplex-Plugin-API
-Create some cool plugins for SimplexClient
+# SimplexClient API
+
+### Gradle:
+````gradle
+repositories {
+    maven {
+        url = "http://tykopvp.com/"
+        allowInsecureProtocol(true)
+    }
+}
+
+dependencies {
+    compileOnly("tk.simplexclient:api:1.0")
+}
+````
+### Maven:
+````xml
+<repositories>
+    <repository>
+        <id>coins</id>
+        <url>http://tykopvp.com/</url>
+    </repository>
+</repositories>
+<dependencies>
+    <dependency>
+        <groupId>tk.simplexclient</groupId>
+        <artifactId>api</artifactId>
+        <version>1.0</version>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
+````
+### How to use it:
+
+first you need to create a plugin.json file in the resources folder
+
+plugin.json content:
+````json
+{
+  "main": "me.cutenyami.simplex.SimplexTestPlugin",
+  "name": "SimplexTest Plugin",
+  "version": "1.0"
+}
+````
+SimplexTestPlugin.java content:
+````java 
+public class SimplexTestPlugin extends Plugin {
+
+    @Override
+    public void onEnable() {
+        System.out.println("Plugin is now enabled!");
+    }
+
+    @Override
+    public void onDisable() {
+        System.out.println("Plugin is now disabled!");
+    }
+}
+````
+
+
