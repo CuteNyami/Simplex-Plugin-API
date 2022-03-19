@@ -59,6 +59,11 @@ public class SimplexTestPlugin extends Plugin {
     }
 }
 ````
+### If you want to get the CPS:
+```java
+CPS.getLeftCPS(); //left cps
+CPS.getRightCPS(); //right cps
+```
 ### Example with KeyBindings:
 ````java
 public class SimplexTestPlugin extends Plugin {
