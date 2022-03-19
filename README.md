@@ -34,7 +34,7 @@ dependencies {
 
 first you need to create a plugin.json file in the resources folder
 
-If you have you .jar file then you need to press Windows+R type %appdata% and go into the folder .simplex\simplex\Mods folder thenn add you .jar file in it make sure you have a plugin.json in it!
+If you have you .jar file then you need to press Windows+R type %appdata% and go into the folder .simplex\simplex\Mods folder thenn add you .jar file in it!
 
 plugin.json content:
 ````json
