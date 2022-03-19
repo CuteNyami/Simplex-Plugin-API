@@ -49,6 +49,11 @@ SimplexTestPlugin.java content:
 public class SimplexTestPlugin extends Plugin {
 
     @Override
+    public void onInit() {
+        System.out.println("init plugin!");
+    }
+
+    @Override
     public void onEnable() {
         System.out.println("Plugin is now enabled!");
     }
@@ -72,8 +77,12 @@ public class SimplexTestPlugin extends Plugin {
     private final Minecraft mc = Minecraft.getMinecraft();
 
     @Override
-    public void onEnable() {
+    public void onInit() {
         SimplexClient.getInstance().getSimplexAPI().getSimplexKeybindings().registerKeyBinding(keyBinding);
+    }
+
+    @Override
+    public void onEnable() {
         EventManager.register(this);
     }
 
