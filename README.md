@@ -87,4 +87,4 @@ public class SimplexTestPlugin extends Plugin {
     }
 }
 ````
-
+If you need help the join our Discord Server: https://simplexclient.tk/discord
