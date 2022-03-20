@@ -131,4 +131,43 @@ public void onEnable() {
     SimplexClient.getInstance().hudManager.hudMods.add(new TestMod());
 }
 ````
+### Example for a Custom Mainmenu:
+````java
+public class TestMainMenu extends MainMenu {
+
+    @Override
+    public void initGui() {
+        initMainMenu();
+        super.initGui();
+    }
+
+    @Override
+    public void drawScreen(int mouseX, int mouseY, float partialTicks) {
+        drawMainMenu(mouseX, mouseY, partialTicks);
+        super.drawScreen(mouseX, mouseY, partialTicks);
+    }
+
+    protected void actionPerformed(GuiButton button) throws IOException {
+        super.actionPerformed(button);
+    }
+
+    @Override
+    protected void mouseClicked(int mouseX, int mouseY, int mouseButton) throws IOException {
+        mouseClickedMainMenu(mouseX, mouseY, mouseButton);
+        super.mouseClicked(mouseX, mouseY, mouseButton);
+    }
+
+    @Override
+    protected void keyTyped(char typedChar, int keyCode) throws IOException {
+        keyTypedMainMenu(typedChar, keyCode);
+        super.keyTyped(typedChar, keyCode);
+    }
+}
+````
+Then add in you Main in the Method called onInit()
+````java
+SimplexClient.getInstance().getSimplexAPI().setMainMenu(new TestMainMenu);
+````
+
+
 If you need help the join our Discord Server: https://simplexclient.tk/discord
