@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("tk.simplexclient:api:1.0")
+    compileOnly("tk.simplexclient:api:2.1")
 }
 ````
 ### Maven:
@@ -25,7 +25,7 @@ dependencies {
     <dependency>
         <groupId>tk.simplexclient</groupId>
         <artifactId>api</artifactId>
-        <version>1.0</version>
+        <version>2.1</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>
