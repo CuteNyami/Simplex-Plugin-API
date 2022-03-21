@@ -108,7 +108,7 @@ public class SimplexTestPlugin extends Plugin {
 public class TestMod extends HudMod {
     
     public TestMod() {
-        super("test mod", "test mod lol", 1, 1, null);
+        super("test mod", 1, 1, null);
     }
 
     @Override
