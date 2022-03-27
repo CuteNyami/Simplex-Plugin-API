@@ -10,14 +10,14 @@ repositories {
 }
 
 dependencies {
-    compileOnly("tk.simplexclient:api:2.2")
+    compileOnly("tk.simplexclient:api:2.5")
 }
 ````
 ### Maven:
 ````xml
 <repositories>
     <repository>
-        <id>coins</id>
+        <id>api</id>
         <url>http://tykopvp.com/</url>
     </repository>
 </repositories>
@@ -25,7 +25,7 @@ dependencies {
     <dependency>
         <groupId>tk.simplexclient</groupId>
         <artifactId>api</artifactId>
-        <version>2.2</version>
+        <version>2.5</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>
